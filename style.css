@@ -1,0 +1,646 @@
+*
+{
+margin: 0;
+padding: 0;
+font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    font-weight: 700 !important;
+    font-size: 40px;
+}
+
+
+.header
+{
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.png);
+background-position: center;
+background-size: cover;
+position: relative;
+
+}
+nav
+{
+    display:flex;
+    padding:2% 5%;
+    justify-content: space-between;
+    align-items:center;
+    height: 100px;
+
+}
+nav img
+{
+    width:150px;
+
+}
+.nav-links
+{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li/*for menu*/
+{
+list-style: none;
+display:inline-block;
+padding:8px 12px;
+position :relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18px;
+}
+.nav-links ul li::after{
+    content:''; /*hide the line under about,course,only visible when curser is on them*/
+        width:0%;
+    height:2px;
+    background-color: #c22418;
+    display:block;
+    margin: auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{/*to show underline when curser is on about,n all for hover effect on buttons*/
+    width:100%;
+}
+.text-box{/* alignment of the center heading*/
+    width:90%;
+    color:#fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);/*in the center of this div*/
+    text-align:center ;
+}
+.text-box h1{/*for the title*/
+font-size:62px;
+
+}
+.text-box p{/*for the paragraph*/
+margin: 10px 0 40px ;/*top  left and right  bottom respectively
+*/
+
+font-size:15px;
+color:rgb(255, 255, 255);
+}
+.sample/*anchr class for visit us link*/
+{
+display: inline-block;
+text-decoration: none;
+color:#fff;
+border: 1px solid rgb(255, 255, 255);
+padding:12px 34px;
+font-size:20px;
+background:transparent;/*box arount visit link under main heading*/
+position: relative;
+cursor:pointer;
+}
+.sample:hover/*hover effect --change colour when cursor is moved*/
+{
+    border: 1px solid #36f4c5;
+    background:#36f4c5 ;
+    transition: 1s;
+    
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px)
+{/*for small device making it reponsive*/
+
+.text-box h1{
+font-size:20px;
+}
+.nav-links ul li{
+    display:block;
+}
+.nav-links {/*menu only visible for small screen device*/
+    position: fixed;
+    background :#e64242;
+    height :100vh;
+    width: 200px;
+    top:0;
+    right:-200px ;
+    text-align: left;
+    z-index :2;
+transition: 1s;
+}
+nav .fa{
+    display:block;
+    color:#fff;
+    margin:10px;
+    font-size:22px;
+    cursor:pointer;
+
+}
+.nav-links ul{/*for slide menu*/
+    padding:30px;
+}
+}
+
+/*     course    */
+.course
+{
+    width: 80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 100px;
+
+}
+h1{  /*for heading courses we offer*/
+    font-size:36;
+    font-weight:600;
+
+}
+
+p{           /*paragraph of courses*/
+color: rgb(56, 50, 50);
+font-size:16px;
+font-weight:300;
+line-height:22px;
+padding:10px;
+
+}
+
+
+.row
+{
+    margin-top:5%;
+    display:flex;
+    justify-content: space-between;
+}
+.course-col  /*box for the degree and post degree courses*/
+{
+    flex-basis:31%;
+    background: #dfd5d5;
+    border-radius:10px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+    transition:0.5s;
+}
+
+.spanList{
+    margin-top: 10colpx !important;
+    padding: 0 !important;
+}
+
+h3
+{
+    /*for box headings degree and post gra.*/
+text-align: center;
+font-weight: 700;
+margin:10px 0;
+font-size: 20px;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width:700px)          /*for resposiveness of courses block*/
+{
+    .row{
+        flex-direction: column;
+    }
+}      
+
+/*------------------capmus---------------------*/
+.Campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    flex-basis:32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+ width: 100%; 
+ display:block;  
+ height: 186px;
+}
+
+
+.layer     /*layer to the image in campus sec*/
+{
+    background: transparent;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+}
+.layer:hover
+{  
+        /*-------------hover effect for campuses--------------*/
+background:rgba(226, 185, 0, 0.7);
+}
+
+.layer h3{      /*-------------for the text on the pic---------------*/
+    width: 100%;
+    font-weight: 500;
+    color:#fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity:0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{  /*----------for hiding the text---------------*/
+bottom:49%;
+opacity:1;
+
+}
+
+
+/*facitities-------------------------------------------------------------------->*/
+.facilities
+{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 100px;
+}
+
+
+.facilities-row
+{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom:5%;
+    text-align:left;
+
+}
+
+.facilities-row img{
+    width: 100%;
+    border-radius: 10px;
+    height: 247px;
+}
+
+.facilities-row p{
+    padding:0;
+
+}
+
+.facilities-row h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+/*----------------------------testimonials----------------------->*/
+.testimonials
+{
+    width:80%;
+    margin:auto;
+    padding-top: 100px;
+    text-align: center;
+
+}
+
+.testi-call{
+flex-basis: 44%;
+border-radius: 10px;
+margin-bottom: 5%;
+text-align: left;
+background: #ffdfe0;
+padding: 25px;
+cursor:pointer;
+display:flex;
+}
+
+.testi-call img{
+    height:40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testi-call p{
+    padding:0;
+}
+
+
+.testi-call h3{
+    margin-top: 15px;
+    text-align:left;
+
+}
+
+.testi-call .fa{    /*----------------for star*** icon--------*/
+    color:#f44336;
+
+}
+
+@media (max-width: 700px)
+{
+    .testi-call img{
+        
+        margin-left: 0px;
+        margin-right: 15px;
+    
+    }
+
+}
+
+
+/*-------------------------CALL TO ACTION----------------*/
+.cta
+{
+margin:100px auto;/* 100 from top and bottom    auto from left and right----*/
+width:80;
+background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/con2.png);
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+padding:100px 0;
+}
+
+.cta h1{
+    color:#fff;
+    margin-bottom: 40px;
+    padding:0;
+
+}
+@media(max-width:700px)
+{
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+
+
+/*---------------footer-----------------------------------------------------*/
+
+.footer
+{
+    width:100%;
+    text-align:center;
+    padding:30px 0;
+
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.icons .fa{   /*------------icons on the footer-----------*/
+color: #f44336;
+margin:0 13px;
+cursor:pointer;
+padding:18px 0;
+}
+
+.fa-star-o{
+    color:#f44336;
+}
+
+
+/*--------------------------------------------------------------------------------------------
+--------------------about us page------------------------------------------------------*/
+
+
+
+.sub-header
+{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+    background-size:21%;
+}
+
+.sub-header h1
+{
+    margin-top: 60px;
+    font-size: 55px;
+}
+
+
+
+.about-us    /*for the pic on about us page*/
+{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+}
+.about-col
+{
+    flex-basis:48%;
+    padding:30px 2px;
+}
+.about-col img
+{
+    width:100%;
+}
+
+.about-col h1{    /*for the title*/
+padding-top:0;
+}
+
+.about-col p{
+    padding:15px 0 25px;           /*15 from top   left right 0 and 25 from bottom*/
+}
+
+
+
+.red-btn
+{
+    border:1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+
+}
+
+.red-btn:hover            /*for the text when we hover on the button*/
+{
+    color:#fff;
+}     
+
+
+/*------------------------blog content page----------------*/
+
+
+.blog-content
+{
+    width: 80%;
+    margin: auto;
+    padding:60px 0;
+}
+
+.blog-left
+{
+    flex-basis: 65%;
+
+}
+.blog-left img{
+    width:80%;
+}
+
+.blog-left h2{
+    color:#222;
+    font-weight:600;
+    margin:30px 0;
+}
+
+.bolg-left p{   /*for the paragragh in blog section*/
+    color:#999;
+    padding:0;
+}
+
+.blog-right{
+    flex-basis: 32%;
+
+}
+
+.blog-right h3{
+    background: #4c99f1;
+    color:#fff;
+    padding:7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.blog-right div{  /*------------for table like view of content on right side of picture----------*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+
+/*-------------comment box----------------------------------*/
+.comment-box
+{
+    border:1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+
+.comment-box h3
+
+{
+text-align: left;
+}
+
+
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+    }
+
+    @media(max-width:700px)/*for responsive view of heading*/
+    {
+        .sub-header h1 {
+ font-size: 24px;
+        }
+    }
+
+
+
+    /*=============================contact us page===================================
+    ======================for the map=============================*/
+
+    .location
+    {
+        width: 80%;
+        margin: auto;
+        padding: 80px 0;
+    }
+
+    .location iframe
+    {
+        width:100%;
+         
+    }
+
+
+
+    /*------------for contact info------------------*/
+
+    .contact-us
+    {
+        width:80%;
+margin: auto;
+    }
+
+    .contact-col
+    {
+        flex-basis: 48%;
+        margin-bottom: 30px;
+
+    }
+
+    .contact-col div{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .contact-col div .fa{/*------------------------for the icons-------------------------*/
+
+
+        font-size: 28px;
+        color: #70152c;
+        margin: 10px ;
+        margin-right: 30px;
+    }
+
+    .contact-col div p{/*---------for the para--------------------*/
+     padding: 0;
+    }
+
+    .contact-col div h5 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: 400;
+    }
+
+
+    /*-----------------for the form--------------*/
+    
+    .contact-col input, .contact-col textarea{
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 17px;
+        outline: #c22418;
+        border:1px solid #ccc;
+        box-sizing: border-box;
+    }

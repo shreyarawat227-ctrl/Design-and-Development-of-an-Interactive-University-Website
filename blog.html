@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="sub-header">
+<nav>
+    <a href="index.html"><img src="images/log-removebg-preview.png"></a>
+    <div class ="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+            
+            
+            <li><a href ="index.html">HOME</a></li>
+            <li><a href ="about.html">ABOUT</a></li>
+            <li><a href ="course.html">COURSE</a></li>
+            <li><a href ="blog.html">BLOG</a></li>
+            <li><a href ="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-bars"onclick="showmenu()" ></i>
+</nav>
+
+<h1>OUR CERTIFICATE & ONLINE PROGRAMES</h1>
+
+    </section>
+
+    <!-----------------------------BLOG PAGE CONTENT--------------->
+    <section class="blog-content">
+
+        <div class ="row">
+            <div class="blog-left">
+                <img src="images/blog1.jpg">
+                <h2>Our Certificates & Online Programs</h2>
+
+<p>
+    Graphic Era is committed to conducting cutting edge scientific research in diverse areas to advance knowledge, inform action and find solutions to critical issues in interest of the society. Novel and beneficial patent inventions and their filings are given immense focus at the university and many professors boast groundbreaking achievements. 
+</p>  <br>
+<p>The recruitment of the students during the training session has again proved that GEHU focuses on grooming its students into industry-ready professionals and not just on producing graduates. </p>
+<br>
+<p>26 Jan holds a special place in the heart of every Indian as it was on 26 Jan 1950 that our constitution officially came into force and the journey of India as a republic, democratic and sovereign nation began. The day is, therefore, celebrated with great pomp and patriotic fervor every year.</p>
+
+
+<div class="comment-box">    <!-----------form--------------------===-->
+    <h3>Leave a comment</h3>
+    <form class="comment-form">
+<input type="text" placeholder="Enter Name ">
+<input type="email" placeholder="Enter Email ">
+<textarea rows="5"placeholder="Comment"></textarea>
+<button type="submit" class="sample red-btn">Post Comment</button>
+    </form>
+</div>
+</div>
+
+
+
+
+
+
+
+        <div class="blog-right">
+            <h3>Post Categories</h3>
+            <div>
+                <span>Business Analytics</span><!---------------------------------------------------->
+                <span>21</span>
+            </div>
+
+            <div>
+                <span>Data Science</span><!---------------------------------------------------->
+                <span>28</span>
+            </div>
+
+            <div>
+                <span>Machine Learning</span><!---------------------------------------------------->
+                <span>15</span>
+            </div>
+
+            <div>
+                <span>Computer Science</span><!---------------------------------------------------->
+                <span>34</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+   
+
+
+
+
+
+
+
+
+
+
+<!--------------------------FOOTER--------------------->
+
+<section class="footer">
+    <h4>About us</h4>
+    <p>Lorem ispum</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+    <!--------script for toggle menu---->
+<script>
+
+    var navLinks= document.getElementById("navLinks");
+  function showmenu()//when click on show menu it will be shown 
+  {
+    navLinks.style.right="0";
+
+  }
+  function hidemenu()//on hidding it menu slide will hide
+  {
+    navLinks.style.right="-200px";
+    
+  }
+</script>
+  <!------------------------------------------------------------------------------------------->  
+</body>
+</html>
